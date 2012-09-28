@@ -3,7 +3,7 @@ phere.Format
 
 Format a C++ string with usage like `sprintf`, but without all that tedious messing around in hyperspace.
 
-Formatting is done with [Boost.format](http://boost.org/libs/format/), so you get both `printf`-style format placeholders and Boost.Format's hand positional ones.
+Formatting is done with [Boost.Format](http://boost.org/libs/format/), so you get both `printf`-style format placeholders and Boost.Format's handy positional ones.
 
 Currently, format exceptions are swallowed, returning an empty string - this suits my usage in phere/Debug quite well, but I'm planning to add throwing versions of `format(...)` as well.
 
