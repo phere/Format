@@ -1,0 +1,4 @@
+project
+	: requirements <cxxflags>-std=c++11 <include>src
+	: usage-requirements <include>src <cxxflags>-std=c++11
+	;

@@ -1,0 +1,3 @@
+unit-test usage
+	  : usage.cpp
+	  : <library>/boost/test <cxxflags>-std=c++11 ;
