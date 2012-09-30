@@ -39,8 +39,8 @@ namespace phere {
       }
     } // namespace detail
 
-    template <typename FormatType, typename ... Args>
-    static std::string format(FormatType&& messageFormat, Args&& ... args)
+    template <typename Result = std::string, typename FormatType, typename ... Args>
+    static Result format(FormatType&& messageFormat, Args&& ... args)
     {
       try
 	{
@@ -53,11 +53,12 @@ namespace phere {
 	  std::cerr << ">>>> Error encountered while formatting string for phere::debug::Logger : ";
 	  std::cerr << boost::current_exception_diagnostic_information() << std::endl;
 	}
-      return "";
+      return Result();
     }
-    // zero-argument overload returns empty string
-    static std::string format()
-    { return ""; }
+    // zero-argument overload returns default-construct Result type
+    template <typename Result = std::string>
+    static Result format()
+    { return Result(); }
   } // namespace Format
 } // namespace phere
 
