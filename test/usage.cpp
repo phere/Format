@@ -1,7 +1,7 @@
 #define BOOST_TEST_MODULE Format
 #include <boost/test/unit_test.hpp>
 
-#include "Format.hpp"
+#include "phere/Format.hpp"
 
 BOOST_AUTO_TEST_CASE( usage )
 {
