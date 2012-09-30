@@ -3,10 +3,6 @@ project
 	: usage-requirements <include>. <cxxflags>-std=c++11
 	;
 
-install phere
-	: src/Format.hpp
-	;
-
 alias Format
       : # no sources
       : # no build requirements
