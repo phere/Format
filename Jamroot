@@ -9,3 +9,5 @@ alias Format
       : # no default build
       : <include>.
       ;
+
+project test ;
