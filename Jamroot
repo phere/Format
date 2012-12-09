@@ -1,13 +1,6 @@
 project
-	: requirements <cxxflags>-std=c++11 <include>.
-	: usage-requirements <include>. <cxxflags>-std=c++11
-	;
+		: requirements <include>include <cxxflags>-std=c++11
+		: usage-requirements <include>include <cxxflags>-std=c++11
+		;
 
-alias Format
-      : # no sources
-      : # no build requirements
-      : # no default build
-      : <include>.
-      ;
-
-project test ;
+alias Format ;

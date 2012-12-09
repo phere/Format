@@ -1,3 +1,4 @@
-project	: requirements <library>/boost/test ;
+project	: requirements <library>/boost/test
+		  <library>..//Format ;
 
 unit-test usage : usage.cpp ;
