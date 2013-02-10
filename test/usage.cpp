@@ -3,23 +3,28 @@
 
 #include "phere/Format.hpp"
 
-BOOST_AUTO_TEST_CASE( usage )
+using phere::format;
+BOOST_AUTO_TEST_CASE( empty )
 {
-  using phere::Format::format;
+  // empty parameters means empty result
+  BOOST_CHECK_EQUAL(format(),
+					"");
+  BOOST_CHECK_EQUAL(format(""),
+					"");
+}
 
-  // empty parameters mean empty result
-  BOOST_CHECK(format()
-	      == "");
-  BOOST_CHECK(format("")
-	      == "");
-
+BOOST_AUTO_TEST_CASE( printf_style )
+{
   // C 'printf'-style formatting
-  BOOST_CHECK(format("%d", 42)
-	      == "42");
-  BOOST_CHECK(format("%s", "string")
-	      == "string");
+  BOOST_CHECK_EQUAL(format("%d", 42),
+					"42");
+  BOOST_CHECK_EQUAL(format("%s", "string"),
+					"string");
+}
 
+BOOST_AUTO_TEST_CASE( positional )
+{
   // Boost.Format positional parameters
-  BOOST_CHECK(format("%2% - %1%", "first", "second")
-	      == "second - first");
+  BOOST_CHECK_EQUAL(format("%2% - %1%", "first", "second"),
+					"second - first");
 }

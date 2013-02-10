@@ -4,3 +4,6 @@ project
 		;
 
 alias Format ;
+
+alias demo : demo//demo ;
+alias test : test//all ;
