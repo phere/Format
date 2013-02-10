@@ -13,7 +13,6 @@
 #include <string>
 #include <iostream>
 #include <boost/format.hpp>
-#include <boost/exception/diagnostic_information.hpp>
 
 namespace phere {
   namespace Format {
@@ -51,8 +50,8 @@ namespace phere {
 	  }
 	catch (boost::io::format_error& ex)
 	  {
-		std::cerr << ">>>> Error encountered while formatting string for phere::debug::Logger : ";
-		std::cerr << boost::current_exception_diagnostic_information() << std::endl;
+		std::cerr << ">>>> Error encountered in phere::format ";
+		std::cerr << ex.what() << std::endl;
 	  }
 	return Result();
   }
