@@ -1,3 +1,5 @@
+using testing ;
+
 project	: requirements <library>/boost/test
 		  <library>..//Format ;
 

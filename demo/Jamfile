@@ -1,1 +1,1 @@
-exe demo : demo.cpp ;
+exe demo : demo.cpp /boost//headers ;

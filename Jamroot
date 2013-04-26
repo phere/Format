@@ -6,4 +6,7 @@ project
 alias Format ;
 
 alias demo : demo//demo ;
+explicit demo ;
+
 alias test : test//all ;
+explicit test ;
